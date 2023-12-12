@@ -11,8 +11,8 @@ class Elevator:
         self.direction = direction
         self.destination = destination
         self.load = load
-    def display_info(self, capacity, current_floor, direction, destination, load):
-        print(f"Информация о лифте {self}: вместимость - {capacity}, текущий этаж - {current_floor}, направление движения - {direction}, назначенный этаж - {destination}, загрузка - {load}")
+    def display_info(self):
+        return f"Информация о лифте: вместимость - {self.capacity}, текущий этаж - {self.current_floor}, направление движения - {self.direction}, назначенный этаж - {self.destination}, загрузка - {self.load}"
 
 class Operator:
     def track_elevator_position(self, elevator):
@@ -39,6 +39,7 @@ house3 = House("Пушкина, 1", 12, 3)
 elevator1 = Elevator(1000, 1, "stationary", 0, 0)
 elevator2 = Elevator(800, 1, "stationary", 0, 0)
 elevator3 = Elevator(1200, 1, "stationary", 0, 0)
+print(elevator1.display_info())
 
 
 operator = Operator()
